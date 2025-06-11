@@ -1,7 +1,7 @@
 #include <iostream>
+#include "GlassShell/EventBus/EventBus.h"
 
 int main()
 {
-    std::cout<<"main"<<std::endl;
     return 0;
 }
