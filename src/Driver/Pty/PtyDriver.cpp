@@ -54,11 +54,11 @@ bool isProcessAlive(pid_t pid) { return (kill(pid, 0) == 0 || errno != ESRCH); }
 
 void PtyDriver::input(const std::string str) {
     if (str.empty()) {
-        std::cout<<"empty"<<std::endl;
+        std::cout << "empty" << std::endl;
         return;
     }
     if (!isProcessAlive(m_pid)) {
-        std::cout<<"process dead"<<std::endl;
+        std::cout << "process dead" << std::endl;
         return;
     }
     write(m_masterFd, str.c_str(), str.size());
